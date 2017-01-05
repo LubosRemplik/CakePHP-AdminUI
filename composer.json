@@ -1,5 +1,5 @@
 {
-    "name": "lubos/AdminUI",
+    "name": "lubos/cakephp-admin-ui",
     "description": "AdminUI plugin for CakePHP",
     "type": "cakephp-plugin",
 	"keywords": ["cakephp", "bootstrap", "admin", "ui"],
