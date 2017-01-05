@@ -16,6 +16,29 @@ Load plugin in bootstrap.php file
 bin/cake plugin load AdminUI
 ```
 
+## Usage
+
+### Filters
+
+Basic example
+
+```
+<?php
+$this->Html->css('AdminUI.admin.min', ['block' => true]);
+echo $this->element('AdminUI.filters', [
+    'sort' => [
+        ['name', 'Name A-Z', ['direction' => 'asc']],
+        ['name', 'Name Z-A', ['direction' => 'desc']],
+    ],
+    'fields' => [
+        'q' => [
+            'placeholder' => 'Filter by title'
+        ],
+    ],
+]); 
+?>
+```
+
 ## Bugs & Features
 
 If you want to help, pull requests are welcome.  
