@@ -1,0 +1,33 @@
+{
+    "name": "lubos/AdminUI",
+    "description": "AdminUI plugin for CakePHP",
+    "type": "cakephp-plugin",
+	"keywords": ["cakephp", "bootstrap", "admin", "ui"],
+    "homepage": "https://github.com/LubosRemplik/CakePHP-AdminUI",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lubos Remplik",
+            "homepage": "http://lubos.me"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "friendsofcake/bootstrap-ui": "^0.5.0",
+		"cakephp/cakephp": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "AdminUI\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AdminUI\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}
