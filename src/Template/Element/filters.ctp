@@ -10,9 +10,12 @@ $sortDefault = [
     ['modified', 'Last updated', ['direction' => 'desc']],
     ['modified', 'Oldest updated', ['direction' => 'asc']],
 ];
-$sort = array_merge($sort, $sortDefault);
+if ($sort) {
+    $sort = array_merge($sort, $sortDefault);
+}
 ?>
 <div class="filters">
+    <?php if ($sort): ?>
     <div class="pull-right dropdown dropdown-sort">
         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-sort"></i> Sort</button>
         <ul class="dropdown-menu dropdown-menu-right">
@@ -21,6 +24,7 @@ $sort = array_merge($sort, $sortDefault);
             <?php endforeach; ?>
         </ul>
     </div>
+    <?php endif; ?>
     <div class="inline">
         <?php if (!empty($bulks)): ?>
         <?= $this->Form->create(null, ['class' => 'form-inline form-bulk-trigger']) ?>
